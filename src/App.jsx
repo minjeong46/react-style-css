@@ -1,4 +1,4 @@
-import "./App.css";
+import styled from "styled-components";
 import Nav from "./components/Nav";
 import ProductGallery from "./components/ProductGallery";
 import ProductInfo from "./components/ProductInfo";
@@ -6,15 +6,24 @@ import ProductOption from "./components/ProductOption";
 
 function App() {
     return (
-        <div className="app">
+        <AppCss>
             <Nav></Nav>
             <ProductGallery></ProductGallery>
-            <div className="product-bottom">
+            <ProductBottom>
                 <ProductInfo></ProductInfo>
                 <ProductOption></ProductOption>
-            </div>
-        </div>
+            </ProductBottom>
+        </AppCss>
     );
 }
 
 export default App;
+
+const AppCss = styled.div`
+    width: 100%;
+    padding: 2rem 16rem;
+`;
+
+const ProductBottom = styled.div`
+    display: flex;
+`;
