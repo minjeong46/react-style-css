@@ -1,21 +1,15 @@
 import React from "react";
-import styled from "styled-components";
-import './Nav.css'
 
 const Nav = () => {
     return (
-        <nav>
+        <nav className="flex mb-4">
             <span>Men</span>
-            <i>|</i>
+            <i className="px-4">|</i>
             <span>Clothing</span>
-            <i>|</i>
-            <span>Basic Tee 6-Pack</span>
+            <i className="px-4">|</i>
+            <span className="text-gray-400">Basic Tee 6-Pack</span>
         </nav>
     );
 };
-
-
-
-
 
 export default Nav;

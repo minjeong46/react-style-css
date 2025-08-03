@@ -1,25 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import teeBox from "../assets/tee-1.png";
 import teeBlack from "../assets/tee-2.png";
 import teeGray from "../assets/tee-3.png";
 import teeWhite from "../assets/tee-4.png";
-import "./ProductGallery.css";
 
 const ProductGallery = () => {
+    const [productImg, setProductImg] = useState([
+        { src: teeBox, alt: "티 모음" },
+        { src: teeBlack, alt: "티 검정" },
+        { src: teeGray, alt: "티 회색" },
+        { src: teeWhite, alt: "티 흰색" },
+    ]);
+
     return (
-        <div className="gallery-container">
-            <div className="gallery-item">
-                <img src={teeBox} alt="티 모음" />
-            </div>
-            <div className="gallery-item">
-                <img src={teeBlack} alt="티 검정" />
-            </div>
-            <div className="gallery-item">
-                <img src={teeGray} alt="티 회색" />
-            </div>
-            <div className="gallery-item">
-                <img src={teeWhite} alt="티 흰색" />
-            </div>
+        <div className="w-100 grid grid-cols-3 grid-rows-1 gap-8 pb-8">
+            {productImg &&
+                productImg.map((img) => {
+                    return (
+                        <div key={img.alt} className="w-100 overflow-hidden rounded-lg gallery-item">
+                            <img className="w-100 object-cover rounded-lg" src={img.src} alt={img.alt} />
+                        </div>
+                    );
+                })}
         </div>
     );
 };

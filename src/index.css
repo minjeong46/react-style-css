@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gallery-item:nth-child(1) {
+    @apply row-start-1 row-span-2 col-start-1;
+}
+.gallery-item:nth-child(2) {
+    @apply row-start-1 col-start-2;
+}
+.gallery-item:nth-child(3) {
+    @apply row-start-2 col-start-2;
+}
+.gallery-item:nth-child(4) {
+    @apply row-start-1 row-span-2 col-start-3;
+}
