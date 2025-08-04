@@ -2,7 +2,6 @@ import Nav from "./components/Nav";
 import ProductGallery from "./components/ProductGallery";
 import ProductInfo from "./components/ProductInfo";
 import ProductOption from "./components/ProductOption";
-import './index.css'
 
 function App() {
     return (

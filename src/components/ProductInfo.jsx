@@ -1,5 +1,3 @@
-import React from "react";
-
 const ProductInfo = () => {
     return (
         <div className="flex-grow-[2] flex-shrink basis-0">

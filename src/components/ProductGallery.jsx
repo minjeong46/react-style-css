@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import teeBox from "../assets/tee-1.png";
-import teeBlack from "../assets/tee-2.png";
-import teeGray from "../assets/tee-3.png";
-import teeWhite from "../assets/tee-4.png";
+import { useState } from "react";
+import teeBox from "../assets/tee-1.webp";
+import teeBlack from "../assets/tee-2.webp";
+import teeGray from "../assets/tee-3.webp";
+import teeWhite from "../assets/tee-4.webp";
 
 const ProductGallery = () => {
     const [productImg, setProductImg] = useState([
@@ -13,12 +13,12 @@ const ProductGallery = () => {
     ]);
 
     return (
-        <div className="w-100 grid grid-cols-3 grid-rows-1 gap-8 pb-8">
+        <div className="grid grid-cols-3 grid-rows-1 gap-8 pb-8">
             {productImg &&
                 productImg.map((img) => {
                     return (
-                        <div key={img.alt} className="w-100 overflow-hidden rounded-lg gallery-item">
-                            <img className="w-100 object-cover rounded-lg" src={img.src} alt={img.alt} />
+                        <div key={img.alt} className="overflow-hidden rounded-lg gallery-item">
+                            <img className="rounded-lg" src={img.src} alt={img.alt} fetchpriority="high" />
                         </div>
                     );
                 })}

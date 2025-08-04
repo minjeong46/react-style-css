@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { FaStar } from "react-icons/fa";
-import { FaRegStar } from "react-icons/fa";
+import { useState } from "react";
+import starOutline from "../assets/star-outline.svg";
+import starFull from "../assets/star.svg";
 
 const ProductOption = () => {
     const [size, setSize] = useState([
@@ -40,11 +40,11 @@ const ProductOption = () => {
                 <h2 className="text-3xl pb-6">$192</h2>
                 <div className="flex">
                     <div className="flex">
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                        <FaRegStar />
+                        <img className="w-[20px] h-[20px]" src={starFull} alt="꽉찬 별"/>
+                        <img className="w-[20px] h-[20px]" src={starFull} alt="꽉찬 별"/>
+                        <img className="w-[20px] h-[20px]" src={starFull} alt="꽉찬 별"/>
+                        <img className="w-[20px] h-[20px]" src={starFull} alt="꽉찬 별"/>
+                        <img className="w-[20px] h-[20px]" src={starOutline} alt="빈 별"/>
                     </div>
                     <span className="pl-2 [color:#584feb] -translate-y-1">
                         117 reviews
